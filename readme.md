@@ -1,6 +1,6 @@
 ## corne split keyboard 藍牙版
 * 燒錄檔 hex/zmk.uf2 只有右手並作為主鍵盤，以下說明有左右手配對忽略即可
-* 因為規格設定為不使用OLED、RGB LED，所以不使用原版的corne的config檔
+* 因為規格設定為不使用OLED、RGB LED，所以不使用原版的corne的config檔，鍵盤名稱也改名為cornea
 * 藍牙模組使用nrfMicro 1.4替代原設計的Arduino promicro
 * 電池使用110mAh，301230鋰電池，凱旋電子供應
 
