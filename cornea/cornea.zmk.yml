@@ -1,0 +1,12 @@
+file_format: "1"
+id: cornea
+name: cornea
+type: shield
+url: https://github.com/omkbd/ErgoDash
+requires: [pro_micro]
+features:
+  - keys
+#  - underglow
+siblings:
+  - cornea_left
+  - cornea_right

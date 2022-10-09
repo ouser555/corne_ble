@@ -1,0 +1,20 @@
+# Copyright (c) 2020 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+#if SHIELD_CORNEA_LEFT
+if SHIELD_CORNEA_RIGHT
+
+config ZMK_KEYBOARD_NAME
+	default "Cornea"
+
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
+	default y
+
+endif
+
+if SHIELD_CORNEA_LEFT || SHIELD_CORNEA_RIGHT
+
+config ZMK_SPLIT
+	default y
+
+endif
