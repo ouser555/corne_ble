@@ -1,4 +1,4 @@
-## corne keyboard 藍牙版
+## corne split keyboard 藍牙版
 * 燒錄檔 hex/zmk.uf2 只有右手並作為主鍵盤，以下說明有左右手配對忽略即可
 * 因為規格設定為不使用OLED、RGB LED，所以不使用原版的corne的config檔
 * 藍牙模組使用nrfMicro 1.4替代原設計的Arduino promicro
