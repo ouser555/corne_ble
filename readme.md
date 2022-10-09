@@ -1,5 +1,7 @@
 ## corne keyboard 藍牙版
-* 燒錄檔 hex/zmk.uf2 只有右手版本
+* 燒錄檔 hex/zmk.uf2 只有右手並作為主鍵盤，以下說明有左右手配對忽略即可
+* 因為規格設定為不使用OLED、RGB LED，所以不使用原版的corne的config檔
+* 藍牙模組使用nrfMicro 1.4替代原設計的Arduino promicro
 
 ## 操作方式
 * 左右手燒好各自的燒錄檔後(就是出廠設定)可以兩邊同時按Reset鍵，讓兩邊鍵盤自動配對。
@@ -55,7 +57,7 @@
 ## 更改按鍵映射功能
   * 目前沒有更改keycode的user interface，只能靠更改程式碼來改變鍵碼。
   
-  * 可以用文字編輯器打開 ergodash/daochoc/daochoc.keymap 修改需要的鍵碼，然後進行編譯燒錄。
+  * 可以用文字編輯器打開 /cornea/cornea.keymap 修改需要的鍵碼，然後進行編譯燒錄。
   
   * https://github.com/ouser555/daochoc/blob/main/daochoc/daochoc.keymap
 
@@ -68,18 +70,18 @@
   * Windows編譯方式沒實際試過，但應該是不會有問題才是。
   
   
-* 2. 將daochoc資料夾
-  * https://github.com/ouser555/daochoc/tree/main/daochoc
+* 2. 將cornea資料夾
+  * https://github.com/ouser555/corne_ble/tree/main/cornea
   * 放到ZMK/app/boards/shields/資料夾底下
   
   
-  * 此時可以修改自己需要的 daochoc.keymap
+  * 此時可以修改自己需要的 cornea.keymap
   
   
   * 用terminal進到zmk/app/ 後執行
   
-    * west build -d build/left -b nrfmicro_13 -- -DSHIELD=daochoc_left
-    * west build -d build/right -b nrfmicro_13 -- -DSHIELD=daochoc_right
+    * west build -d build/left -b nrfmicro_13 -- -DSHIELD=cornea_left
+    * west build -d build/right -b nrfmicro_13 -- -DSHIELD=cornea_right
   
   
   * 成功後燒錄檔會放在
@@ -93,8 +95,8 @@
     * 這些檔案有時會直接套用在新編譯的鍵盤上，造成有些修改沒有生效，
     * 所以一般建議編譯時加上-p這個參數，在編譯時可以先清除掉這些檔案。
       
-    * west build -p -d build/left -b nrfmicro_13 -- -DSHIELD=daochoc_left
-    * west build -p -d build/right -b nrfmicro_13 -- -DSHIELD=daochoc_right
+    * west build -p -d build/left -b nrfmicro_13 -- -DSHIELD=cornea_left
+    * west build -p -d build/right -b nrfmicro_13 -- -DSHIELD=cornea_right
 
 
 ## 燒錄方式
