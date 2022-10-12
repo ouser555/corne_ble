@@ -75,7 +75,7 @@
   
   * 可以用文字編輯器打開 /cornea/cornea.keymap 修改需要的鍵碼，然後進行編譯燒錄。
   
-  * https://github.com/ouser555/daochoc/blob/main/daochoc/daochoc.keymap
+  * https://github.com/ouser555/corne_ble/blob/main/cornea/cornea.keymap
 
 ## 編譯方式
  
@@ -154,7 +154,7 @@
       進入bootloader模式，把這個檔案燒進去，重置配對資訊。
       
       
-    * 然後再重燒一次左右手的daochoc燒錄檔。
+    * 然後再重燒一次左右手的cornea燒錄檔。
     
     
     * 兩邊燒完後同時按Reset鍵，左右手鍵盤連接後，再與電腦配對應該就可以成功配對。
